@@ -335,12 +335,3 @@ This project successfully implements a **hands-free CI/CD pipeline** using Jenki
 ## ⭐ Final Note
 
 This project is **portfolio-ready**, **interview-ready**, and reflects **real-world DevOps practices**.
-
-If you want:
-
-* PDF version
-* Interview Q&A from this project
-* Resume bullet points
-* Webhook automation
-
-Just tell me 👍
