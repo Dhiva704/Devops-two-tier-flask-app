@@ -6,7 +6,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/prashantgohel321/DevOps-Project-Two-Tier-Flask-App.git'
+                url: 'https://github.com/Dhiva704/Devops-two-tier-flask-app.git'
             }
         }
 
