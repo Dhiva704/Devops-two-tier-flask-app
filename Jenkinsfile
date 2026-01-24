@@ -2,21 +2,14 @@ pipeline {
     agent any
 
     stages {
-
         stage('Clone Repo') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/Dhiva704/Devops-two-tier-flask-app.git'
+                    url: 'https://github.com/<your-username>/<your-repo-name>.git'
             }
         }
 
-        stage('Docker Cleanup') {
-            steps {
-                sh 'docker system prune -af || true'
-            }
-        }
-
-        stage('Build & Deploy') {
+        stage('Deploy App') {
             steps {
                 sh '''
                 docker compose down || true
@@ -29,10 +22,10 @@ pipeline {
 
     post {
         success {
-            echo "✅ Deployment Successful!"
+            echo "✅ Deployment Successful"
         }
         failure {
-            echo "❌ Deployment Failed!"
+            echo "❌ Deployment Failed"
         }
     }
 }
