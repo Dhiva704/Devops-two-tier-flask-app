@@ -66,4 +66,5 @@ def health():
 if __name__ == "__main__":
     wait_for_db()
     init_db()
-    app.run(host="0.0.0.0", port=5000)
+    # Changed port to 8000 and added ssl_context for HTTPS
+    app.run(host="0.0.0.0", port=8000, ssl_context=('cert.pem', 'key.pem'))

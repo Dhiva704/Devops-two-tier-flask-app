@@ -27,7 +27,11 @@ services:
     build:
       context: .
     ports:
-      - "5000:5000"
+      - "8000:8000"
+    volumes:
+      # Mounts the SSL certificates for HTTPS
+      - ./cert.pem:/app/cert.pem
+      - ./key.pem:/app/key.pem
     environment:
       MYSQL_HOST: mysql
       MYSQL_USER: root
@@ -40,9 +44,10 @@ services:
       - two-tier-net
     restart: always
 
+# Defines the database storage volume
 volumes:
   mysql_data:
 
+# Explicitly defines the network so both containers can communicate
 networks:
   two-tier-net:
-  
